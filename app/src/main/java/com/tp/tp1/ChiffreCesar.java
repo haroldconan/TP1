@@ -1,3 +1,5 @@
+package com.tp.tp1;
+
 /**
  * Created by lanoix-a on 06/11/2017.
  */
@@ -25,6 +27,26 @@ public class ChiffreCesar {
                 int npos = (posInitiale + decalage) % 26;
                 if (npos == 0) {
                     npos = 26;
+                }
+                chResultat[i] = ALPHABET[npos];
+            }
+        }
+        return new String(chResultat);
+    }
+    public static String dechiffrement(String chaine, int decalage) {
+
+        char[] chInitial = chaine.toUpperCase().toCharArray();
+        char[] chResultat = new char[chInitial.length];
+
+        for (int i = 0; i < chInitial.length; i++) {
+            int posInitiale = position(chInitial[i]);
+            if (posInitiale == -1) {
+                chResultat[i] = chInitial[i];
+            }
+            else {
+                int npos = (posInitiale - decalage) % 26;
+                if (npos == 26) {
+                    npos = 0;
                 }
                 chResultat[i] = ALPHABET[npos];
             }

@@ -6,13 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Texte originale"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/txtEntre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:capitalize="none"
+            android:ems="10"
+            android:inputType="textCapCharacters"
+            android:textAllCaps="true" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:max="26"
+            android:progress="1" />
+
+        <EditText
+            android:id="@+id/txtSeekBar"
+            style="@android:style/Widget.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:fontFamily="cursive"
+            android:text="Texte chiffré"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/txtChiffre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="textPersonName"
+            android:textAllCaps="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btchiffrement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:text="Chiffrement"
+                android:textAllCaps="true" />
+
+            <Button
+                android:id="@+id/bteffacer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:text="Effacer" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btdechiffrer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="50px"
+            android:text="Déchiffrer" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
